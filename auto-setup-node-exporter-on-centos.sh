@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yum update -y
+#yum update -y
 
 export lanip=`ip -4 addr show eth0| grep -oP "(?<=inet ).*(?=/)"`
 
