@@ -2,7 +2,7 @@
 
 #yum update -y
 
-export lanip=`ip -4 addr show eth0| grep -oP "(?<=inet ).*(?=/)"`
+export lanip=`ip -4 addr show ens160| grep -oP "(?<=inet ).*(?=/)"`
 
 echo "Lan IP: "$lanip
 
