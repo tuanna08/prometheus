@@ -47,8 +47,9 @@ EOF
 
 systemctl daemon-reload
 systemctl restart node_exporter
+
 systemctl status node_exporter
 
 curl http://$lanip:9100/
-
+systemctl enable node_exporter
 echo "install node exporter done"
