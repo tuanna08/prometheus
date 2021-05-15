@@ -44,7 +44,7 @@ ExecStart=/usr/local/bin/node_exporter  --web.listen-address=$lanip:9100
 WantedBy=multi-user.target
 EOF
 
-
+timedatectl set-timezone Asia/Ho_Chi_Minh
 systemctl daemon-reload
 systemctl restart node_exporter
 
