@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #yum update -y
-
+timedatectl set-timezone Asia/Ho_Chi_Minh
 export lanip=`ip -4 addr show eth1| grep -oP "(?<=inet ).*(?=/)"`
 
 echo "Lan IP: "$lanip
