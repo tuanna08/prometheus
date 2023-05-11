@@ -2,7 +2,8 @@
 
 #yum update -y
 timedatectl set-timezone Asia/Ho_Chi_Minh
-export lanip=`ip -4 addr show eth1| grep -oP "(?<=inet ).*(?=/)"`
+#export lanip=`ip -4 addr show eth1| grep -oP "(?<=inet ).*(?=/)"`
+export lanip="0.0.0.0"
 
 echo "Lan IP: "$lanip
 
@@ -13,7 +14,8 @@ if [ -f "$FILE" ]; then
     echo "$FILE exists."
 else
     echo "$FILE does not exist."
-    wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz  -P /tmp/
+#    wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz  -P /tmp/
+    wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz -P /tmp/
 fi
 
 tar -xvf /tmp/node_exporter-1.0.1.linux-amd64.tar.gz -C /tmp/
