@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: prometheus
+  annotations:
+    github.com/project-slug: tuanna08/prometheus
+spec:
+  type: other
+  lifecycle: unknown
+  owner: tuanna08
