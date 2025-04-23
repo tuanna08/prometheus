@@ -9,7 +9,7 @@ echo "Lan IP: "$lanip
 
 sudo apt install wget curl git -y
 
-FILE=/tmp/node_exporter-1.0.1.linux-amd64.tar.gz
+FILE=/tmp/node_exporter-1.5.0.linux-amd64.tar.gz
 if [ -f "$FILE" ]; then
     echo "$FILE exists."
 else
