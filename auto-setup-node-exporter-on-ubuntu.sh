@@ -18,14 +18,14 @@ else
     wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz -P /tmp/
 fi
 
-tar -xvf /tmp/node_exporter-1.0.1.linux-amd64.tar.gz -C /tmp/
+tar -xvf /tmp/node_exporter-1.5.0.linux-amd64.tar.gz -C /tmp/
 
 FILE2=/usr/local/bin/node_exporter
 if [ -f "$FILE2" ]; then
     echo "$FILE2 exists."
 else
     echo "$FILE2 does not exist."
-    mv -f /tmp/node_exporter-1.0.1.linux-amd64/node_exporter /usr/local/bin/
+    mv -f /tmp/node_exporter-1.5.0.linux-amd64/node_exporter /usr/local/bin/
 fi
 
 
